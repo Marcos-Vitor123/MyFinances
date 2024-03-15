@@ -4,6 +4,9 @@ namespace MyFinances
 {
     internal class Program
     {
+        private static void Main(string[] args)
+        {
+        // Variáveis
         decimal rendaMensal = 0;
         decimal rendaExtra = 0;
         decimal rendaTotal = 0;
@@ -18,6 +21,7 @@ namespace MyFinances
         decimal telefone = 0;
         decimal estetica = 0;
         decimal entretenimento = 0;
+        }
     }
 }
 
