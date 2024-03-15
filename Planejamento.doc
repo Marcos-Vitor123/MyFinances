@@ -1,0 +1,42 @@
+Variáveis
+
+    - rendaMensal -> Refere-se ao salário mensal
+    - rendaExtra -> Refere-se a um valor ganho a mais no mês
+    - rendaTotal -> Refere-se a soma de tudo que vem sobrando dos meses anteriores
+    - aluguel
+    - internet
+    - luz
+    - cursoProgramacao
+    - faculdade
+    - nubank
+    - neon
+    - inter
+    - telefone
+    - estetica
+    - entretenimento
+
+Imprimir na tela
+
+- Cabeçalho principal
+
+    - Título do programa
+
+- Cabeçalho sobre a renda
+
+    - Renda Mensal 
+    - Renda Extra
+    - Renda Total 
+
+- Cabeçalho sobre cada gastos
+
+    - Aluguel
+    - Internet 
+    - Luz 
+    - Rocketseat
+    - Ampli
+    - Nubank
+    - Neon 
+    - Inter 
+    - Celular
+    - Corte Cabelo 
+    - Amazon
