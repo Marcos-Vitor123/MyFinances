@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace MyFinances
 {
@@ -70,8 +71,62 @@ namespace MyFinances
         Console.WriteLine($"Amazon: \t\t{entretenimento}\n");
 
         Console.WriteLine($"Valor Restante: \t{valorRestante}\n");
-        Console.ReadKey(); 
+    
+        string[] linhas = 
+        [
+            "\n\tMinhas Finanças\t\n",
+
+            "\tRenda Mensal\t\n",
+
+            $"Renda Mensal: \t\t{rendaMensal}", 
+            $"Renda Extra: \t\t{rendaExtra}",
+            $"Renda Total: \t\t{rendaTotal}\n",
+
+            "\tGastos Mensal\t\n",
+
+            $"Aluguel: \t\t{aluguel}",
+            $"Internet: \t\t{internet}",
+            $"Luz: \t\t\t{luz}",
+            $"Rocketseat: \t\t{cursoProgramacao}",
+            $"Ampli: \t\t\t{faculdade}",
+            $"Nubank: \t\t{nubank}",
+            $"Neon: \t\t\t{neon}",
+            $"Inter: \t\t\t{inter}",
+            $"Celular: \t\t{telefone}",
+            $"Corte Cabelo: \t\t{estetica}",
+            $"Amazon: \t\t{entretenimento}\n",
+
+            $"Valor Restante: \t{valorRestante}\n"
+        ];
+
+        Console.WriteLine("Deseja salvar o arquivo?\n");
+        Console.WriteLine("0 - Sair");
+        Console.WriteLine("1 - Salvar\n");
+        Console.Write("Escolha a opção desejada: ");
+        int opcao = int.Parse(Console.ReadLine());
+
+        switch (opcao)
+        {
+            case 0:
+                Environment.Exit(0);
+                break;
+            case 1:
+                string caminhoDiretorio = @"D:\";
+
+                using (StreamWriter saidaArquivo = new StreamWriter(Path.Combine(caminhoDiretorio, "Minhas Finanças.txt")))
+                {
+                    foreach (string linha in linhas)
+                        saidaArquivo.WriteLine(linha);
+                }
+                Console.WriteLine("\nArquivo salvo com sucesso!");
+                break;
+            default:
+                Console.WriteLine("Opção inválida!");
+                break;
+            }
+            Console.ReadKey();
         }
+
     }
 }
 
