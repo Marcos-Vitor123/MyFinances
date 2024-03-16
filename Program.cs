@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Principal;
 
 namespace MyFinances
 {
@@ -6,7 +7,12 @@ namespace MyFinances
     {
         private static void Main(string[] args)
         {
-        // Variáveis
+            Principal();
+        }
+
+        public static void Principal()
+        {
+           // Variáveis
         decimal rendaMensal = 0;
         decimal rendaExtra = 0;
         decimal rendaTotal = 0;
@@ -49,7 +55,7 @@ namespace MyFinances
         Console.WriteLine($"Amazon: \t\t{entretenimento}\n");
 
         Console.WriteLine($"Valor Restante: \t{valorRestante}\n");
-        Console.ReadKey();
+        Console.ReadKey(); 
         }
     }
 }
