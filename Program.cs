@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Principal;
 
 namespace MyFinances
 {
@@ -13,22 +12,35 @@ namespace MyFinances
         public static void Principal()
         {
         // Variáveis
-        decimal aluguel = 800.00m;
-        decimal internet = 99.00m;
-        decimal luz = 0.00m;
-        decimal cursoProgramacao = 0.00m;
-        decimal faculdade = 150.00m;
-        decimal nubank = 0.00m;
-        decimal neon = 0.00m;
-        decimal inter = 0.00m;
-        decimal telefone = 0.00m;
-        decimal estetica = 0.00m;
-        decimal entretenimento = 0.00m;
+        Console.Write("Aluguel: ");
+        decimal aluguel = decimal.Parse(Console.ReadLine());
+        Console.Write("Internet: ");
+        decimal internet = decimal.Parse(Console.ReadLine());
+        Console.Write("Luz: "); 
+        decimal luz = decimal.Parse(Console.ReadLine());
+        Console.Write("Rockeseat: ");
+        decimal cursoProgramacao = decimal.Parse(Console.ReadLine());
+        Console.Write("Ampli: ");
+        decimal faculdade = decimal.Parse(Console.ReadLine());
+        Console.Write("Nubank: ");
+        decimal nubank = decimal.Parse(Console.ReadLine());
+        Console.Write("Neon: ");
+        decimal neon = decimal.Parse(Console.ReadLine());
+        Console.Write("Inter: ");
+        decimal inter = decimal.Parse(Console.ReadLine());
+        Console.Write("Telefone: ");
+        decimal telefone = decimal.Parse(Console.ReadLine());
+        Console.Write("Corte de Cabelo: ");
+        decimal estetica = decimal.Parse(Console.ReadLine());
+        Console.Write("Amazon: ");
+        decimal entretenimento = decimal.Parse(Console.ReadLine());
 
         decimal somaGastos = aluguel + internet + luz + cursoProgramacao + faculdade + nubank + neon + inter + telefone + estetica + entretenimento;
 
-        decimal rendaMensal = 1000.00m;
-        decimal rendaExtra = 0.00m;
+        Console.Write("Qual sua Renda Mensal? ");
+        decimal rendaMensal = decimal.Parse(Console.ReadLine());
+        Console.Write("Qual a Renda Extra? ");
+        decimal rendaExtra = decimal.Parse(Console.ReadLine());
         decimal rendaTotal = rendaMensal + rendaExtra;
         decimal valorRestante = rendaTotal - somaGastos;
 
