@@ -6,10 +6,10 @@ namespace MyFinances
     {
         private static void Main(string[] args)
         {
-            Principal();
+            Criar();
         }
 
-        public static void Principal()
+        public static void Criar()
         {
         // Variáveis
         Console.Write("Aluguel: ");
