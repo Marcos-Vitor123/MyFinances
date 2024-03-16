@@ -12,11 +12,7 @@ namespace MyFinances
 
         public static void Principal()
         {
-           // Variáveis
-        decimal rendaMensal = 0;
-        decimal rendaExtra = 0;
-        decimal rendaTotal = 0;
-        decimal valorRestante = 0;
+        // Variáveis
         decimal aluguel = 0;
         decimal internet = 0;
         decimal luz = 0;
@@ -28,6 +24,13 @@ namespace MyFinances
         decimal telefone = 0;
         decimal estetica = 0;
         decimal entretenimento = 0;
+
+        decimal somaGastos = 0;
+
+        decimal rendaMensal = 0;
+        decimal rendaExtra = 0;
+        decimal rendaTotal = rendaMensal + rendaExtra;
+        decimal valorRestante = rendaTotal - somaGastos;
 
         // Impressões na tela
 
