@@ -13,22 +13,22 @@ namespace MyFinances
         public static void Principal()
         {
         // Variáveis
-        decimal aluguel = 0;
-        decimal internet = 0;
-        decimal luz = 0;
-        decimal cursoProgramacao = 0;
-        decimal faculdade = 0;
-        decimal nubank = 0;
-        decimal neon = 0;
-        decimal inter = 0;
-        decimal telefone = 0;
-        decimal estetica = 0;
-        decimal entretenimento = 0;
+        decimal aluguel = 800.00m;
+        decimal internet = 99.00m;
+        decimal luz = 0.00m;
+        decimal cursoProgramacao = 0.00m;
+        decimal faculdade = 150.00m;
+        decimal nubank = 0.00m;
+        decimal neon = 0.00m;
+        decimal inter = 0.00m;
+        decimal telefone = 0.00m;
+        decimal estetica = 0.00m;
+        decimal entretenimento = 0.00m;
 
-        decimal somaGastos = 0;
+        decimal somaGastos = aluguel + internet + luz + cursoProgramacao + faculdade + nubank + neon + inter + telefone + estetica + entretenimento;
 
-        decimal rendaMensal = 0;
-        decimal rendaExtra = 0;
+        decimal rendaMensal = 1000.00m;
+        decimal rendaExtra = 0.00m;
         decimal rendaTotal = rendaMensal + rendaExtra;
         decimal valorRestante = rendaTotal - somaGastos;
 
