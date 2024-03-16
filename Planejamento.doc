@@ -2,7 +2,8 @@ Variáveis
 
     - rendaMensal -> Refere-se ao salário mensal
     - rendaExtra -> Refere-se a um valor ganho a mais no mês
-    - rendaTotal -> Refere-se a soma de tudo que vem sobrando dos meses anteriores
+    - rendaTotal -> Refere-se a soma da renda mensal mais a renda extra
+    - valorRestante -> Refere-se a subtração dso gastos mensais com a renda total
     - aluguel
     - internet
     - luz
