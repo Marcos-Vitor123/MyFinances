@@ -3,14 +3,14 @@
 
 	Renda Mensal	
 
-Renda Mensal: 		1000
+Renda Mensal: 		100
 Renda Extra: 		0
-Renda Total: 		1000
+Renda Total: 		100
 
 	Gastos Mensal	
 
-Aluguel: 		900
-Internet: 		0
+Aluguel: 		10
+Internet: 		10
 Luz: 			0
 Rocketseat: 		0
 Ampli: 			0
@@ -21,5 +21,5 @@ Celular: 		0
 Corte Cabelo: 		0
 Amazon: 		0
 
-Valor Restante: 	100
+Valor Restante: 	80
 

@@ -32,28 +32,41 @@ namespace MyFinances
         {
             Console.Clear();
 
+            List<decimal> variaveis = [];
+
             Console.Write("Aluguel: ");
             aluguel = decimal.Parse(Console.ReadLine());
+            variaveis.Add(aluguel);
             Console.Write("Internet: ");
             internet = decimal.Parse(Console.ReadLine());
+            variaveis.Add(internet);
             Console.Write("Luz: "); 
             luz = decimal.Parse(Console.ReadLine());
+            variaveis.Add(luz);
             Console.Write("Rockeseat: ");
             cursoProgramacao = decimal.Parse(Console.ReadLine());
+            variaveis.Add(cursoProgramacao);
             Console.Write("Ampli: ");
             faculdade = decimal.Parse(Console.ReadLine());
+            variaveis.Add(faculdade);
             Console.Write("Nubank: ");
             nubank = decimal.Parse(Console.ReadLine());
+            variaveis.Add(nubank);
             Console.Write("Neon: ");
             neon = decimal.Parse(Console.ReadLine());
+            variaveis.Add(neon);
             Console.Write("Inter: ");
             inter = decimal.Parse(Console.ReadLine());
+            variaveis.Add(inter);
             Console.Write("Telefone: ");
             telefone = decimal.Parse(Console.ReadLine());
+            variaveis.Add(telefone);
             Console.Write("Corte de Cabelo: ");
             estetica = decimal.Parse(Console.ReadLine());
+            variaveis.Add(estetica);
             Console.Write("Amazon: ");
             entretenimento = decimal.Parse(Console.ReadLine());
+            variaveis.Add(entretenimento);
 
             Operacoes();
             Salvar();
@@ -108,7 +121,9 @@ namespace MyFinances
             Console.WriteLine("0 - Sair");
             Console.WriteLine("1 - Salvar\n");
             Console.Write("Escolha a opção desejada: ");
+
             int opcao = int.Parse(Console.ReadLine());
+
             switch (opcao)
             {
                 case 0:
