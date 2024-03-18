@@ -55,7 +55,6 @@ namespace MyFinances
 
             somaGastos = aluguel + internet + luz + cursoProgramacao + faculdade + nubank + neon + inter + telefone + estetica + entretenimento;
             
-
             Console.Write("Qual sua Renda Mensal? ");
             rendaMensal = decimal.Parse(Console.ReadLine());
             Console.Write("Qual a Renda Extra? ");
@@ -63,11 +62,18 @@ namespace MyFinances
             rendaTotal = rendaMensal + rendaExtra;
             valorRestante = rendaTotal - somaGastos;
 
-            Salvar(aluguel, internet, luz, cursoProgramacao, faculdade, nubank, neon, inter, telefone, estetica, entretenimento, somaGastos, rendaMensal, rendaExtra, rendaTotal, valorRestante);
-            
-            // Impressões na tela
+            Salvar();
 
             Console.Clear();
+
+            ImprimirTela();    
+            Menu();
+            
+            Console.ReadKey();
+        }
+
+        public static void ImprimirTela()
+        {
             Console.WriteLine("\n\tMinhas Finanças\t\n");
 
             Console.WriteLine("\tRenda Mensal\t\n");
@@ -91,10 +97,6 @@ namespace MyFinances
             Console.WriteLine($"Amazon: \t\t{entretenimento}\n");
 
             Console.WriteLine($"Valor Restante: \t{valorRestante}\n");
-            //*****************************************
-            Menu();
-            //*************************************************
-            Console.ReadKey();
         }
         
         public static void Menu()
@@ -110,16 +112,16 @@ namespace MyFinances
                     Environment.Exit(0);
                     break;
                 case 1:
-                    Salvar(aluguel, internet, luz, cursoProgramacao, faculdade, nubank, neon, inter, telefone, estetica, entretenimento, somaGastos, rendaMensal, rendaExtra, rendaTotal, valorRestante);
+                    Salvar();
                     break;
                 default:
                     Console.WriteLine("Opção inválida!");
                     break;
             }
         }
-        public static void Salvar(decimal aluguel, decimal internet, decimal luz, decimal cursoProgramacao, decimal faculdade, decimal nubank,  decimal neon, decimal inter, decimal telefone, decimal estetica, decimal entretenimento, decimal somaGastos, decimal rendaMensal, decimal rendaExtra, decimal rendaTotal, decimal valorRestante)
+        public static void Salvar()
         {
-            // Salva no arquivo
+            // Salvar no arquivo
             string[] linhas = 
             [
                 "\n\tMinhas Finanças\t\n",
@@ -147,7 +149,7 @@ namespace MyFinances
                 $"Valor Restante: \t{valorRestante}\n"
             ];
 
-            string caminhoDiretorio = @".\";
+            string caminhoDiretorio = @".\"; // .\ -> Salva no mesmo local do projeto ou programa
 
             using (StreamWriter saidaArquivo = new StreamWriter(Path.Combine(caminhoDiretorio, "Minhas Finanças.txt")))
             {

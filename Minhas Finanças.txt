@@ -9,7 +9,7 @@ Renda Total: 		1000
 
 	Gastos Mensal	
 
-Aluguel: 		100
+Aluguel: 		200
 Internet: 		0
 Luz: 			0
 Rocketseat: 		0
@@ -21,5 +21,5 @@ Celular: 		0
 Corte Cabelo: 		0
 Amazon: 		0
 
-Valor Restante: 	900
+Valor Restante: 	800
 
