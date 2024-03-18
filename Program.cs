@@ -30,6 +30,8 @@ namespace MyFinances
         }
         public static void Criar()
         {
+            Console.Clear();
+
             Console.Write("Aluguel: ");
             aluguel = decimal.Parse(Console.ReadLine());
             Console.Write("Internet: ");
@@ -53,6 +55,16 @@ namespace MyFinances
             Console.Write("Amazon: ");
             entretenimento = decimal.Parse(Console.ReadLine());
 
+            Operacoes();
+            Salvar();
+            ImprimirTela();    
+            Menu();
+            
+            Console.ReadKey();
+        }
+
+        public static void Operacoes()
+        {
             somaGastos = aluguel + internet + luz + cursoProgramacao + faculdade + nubank + neon + inter + telefone + estetica + entretenimento;
             
             Console.Write("Qual sua Renda Mensal? ");
@@ -61,15 +73,6 @@ namespace MyFinances
             rendaExtra = decimal.Parse(Console.ReadLine());
             rendaTotal = rendaMensal + rendaExtra;
             valorRestante = rendaTotal - somaGastos;
-
-            Salvar();
-
-            Console.Clear();
-
-            ImprimirTela();    
-            Menu();
-            
-            Console.ReadKey();
         }
 
         public static void ImprimirTela()
