@@ -34,6 +34,7 @@ namespace MyFinances
 
             List<decimal> variaveis = [];
 
+            Console.WriteLine("\n\tBem vindo ao Minhas Finanças!\t\n");
             Console.Write("Aluguel: ");
             aluguel = decimal.Parse(Console.ReadLine());
             variaveis.Add(aluguel);
