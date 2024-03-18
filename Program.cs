@@ -5,44 +5,63 @@ namespace MyFinances
 {
     internal class Program
     {
+        public static decimal aluguel;
+        public static decimal internet;
+        public static decimal luz;
+        public static decimal cursoProgramacao;
+        public static decimal faculdade;
+        public static decimal nubank;
+        public static decimal neon;
+        public static decimal inter;
+        public static decimal telefone;
+        public static decimal estetica;
+        public static decimal entretenimento;
+        public static decimal somaGastos;
+        public static decimal rendaMensal;
+        public static decimal rendaExtra;
+        public static decimal rendaTotal;
+        public static decimal valorRestante;
+
+
         private static void Main(string[] args)
         {
             Criar();
+            Menu();
         }
         public static void Criar()
         {
             Console.Write("Aluguel: ");
-            decimal aluguel = decimal.Parse(Console.ReadLine());
+            aluguel = decimal.Parse(Console.ReadLine());
             Console.Write("Internet: ");
-            decimal internet = decimal.Parse(Console.ReadLine());
+            internet = decimal.Parse(Console.ReadLine());
             Console.Write("Luz: "); 
-            decimal luz = decimal.Parse(Console.ReadLine());
+            luz = decimal.Parse(Console.ReadLine());
             Console.Write("Rockeseat: ");
-            decimal cursoProgramacao = decimal.Parse(Console.ReadLine());
+            cursoProgramacao = decimal.Parse(Console.ReadLine());
             Console.Write("Ampli: ");
-            decimal faculdade = decimal.Parse(Console.ReadLine());
+            faculdade = decimal.Parse(Console.ReadLine());
             Console.Write("Nubank: ");
-            decimal nubank = decimal.Parse(Console.ReadLine());
+            nubank = decimal.Parse(Console.ReadLine());
             Console.Write("Neon: ");
-            decimal neon = decimal.Parse(Console.ReadLine());
+            neon = decimal.Parse(Console.ReadLine());
             Console.Write("Inter: ");
-            decimal inter = decimal.Parse(Console.ReadLine());
+            inter = decimal.Parse(Console.ReadLine());
             Console.Write("Telefone: ");
-            decimal telefone = decimal.Parse(Console.ReadLine());
+            telefone = decimal.Parse(Console.ReadLine());
             Console.Write("Corte de Cabelo: ");
-            decimal estetica = decimal.Parse(Console.ReadLine());
+            estetica = decimal.Parse(Console.ReadLine());
             Console.Write("Amazon: ");
-            decimal entretenimento = decimal.Parse(Console.ReadLine());
+            entretenimento = decimal.Parse(Console.ReadLine());
 
-            decimal somaGastos = aluguel + internet + luz + cursoProgramacao + faculdade + nubank + neon + inter + telefone + estetica + entretenimento;
+            somaGastos = aluguel + internet + luz + cursoProgramacao + faculdade + nubank + neon + inter + telefone + estetica + entretenimento;
             
 
             Console.Write("Qual sua Renda Mensal? ");
-            decimal rendaMensal = decimal.Parse(Console.ReadLine());
+            rendaMensal = decimal.Parse(Console.ReadLine());
             Console.Write("Qual a Renda Extra? ");
-            decimal rendaExtra = decimal.Parse(Console.ReadLine());
-            decimal rendaTotal = rendaMensal + rendaExtra;
-            decimal valorRestante = rendaTotal - somaGastos;
+            rendaExtra = decimal.Parse(Console.ReadLine());
+            rendaTotal = rendaMensal + rendaExtra;
+            valorRestante = rendaTotal - somaGastos;
 
             Salvar(aluguel, internet, luz, cursoProgramacao, faculdade, nubank, neon, inter, telefone, estetica, entretenimento, somaGastos, rendaMensal, rendaExtra, rendaTotal, valorRestante);
             
@@ -72,13 +91,19 @@ namespace MyFinances
             Console.WriteLine($"Amazon: \t\t{entretenimento}\n");
 
             Console.WriteLine($"Valor Restante: \t{valorRestante}\n");
-
+            //*****************************************
+            Menu();
+            //*************************************************
+            Console.ReadKey();
+        }
+        
+        public static void Menu()
+        {
             Console.WriteLine("Deseja salvar o arquivo?\n");
             Console.WriteLine("0 - Sair");
             Console.WriteLine("1 - Salvar\n");
             Console.Write("Escolha a opção desejada: ");
             int opcao = int.Parse(Console.ReadLine());
-
             switch (opcao)
             {
                 case 0:
@@ -91,9 +116,7 @@ namespace MyFinances
                     Console.WriteLine("Opção inválida!");
                     break;
             }
-            Console.ReadKey();
         }
-        
         public static void Salvar(decimal aluguel, decimal internet, decimal luz, decimal cursoProgramacao, decimal faculdade, decimal nubank,  decimal neon, decimal inter, decimal telefone, decimal estetica, decimal entretenimento, decimal somaGastos, decimal rendaMensal, decimal rendaExtra, decimal rendaTotal, decimal valorRestante)
         {
             // Salva no arquivo
@@ -124,7 +147,7 @@ namespace MyFinances
                 $"Valor Restante: \t{valorRestante}\n"
             ];
 
-            string caminhoDiretorio = @"D:\";
+            string caminhoDiretorio = @".\";
 
             using (StreamWriter saidaArquivo = new StreamWriter(Path.Combine(caminhoDiretorio, "Minhas Finanças.txt")))
             {
@@ -133,6 +156,7 @@ namespace MyFinances
             }
             Console.WriteLine("\nArquivo salvo com sucesso!");
         }
+
     }
 }
 

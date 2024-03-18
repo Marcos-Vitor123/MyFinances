@@ -1,0 +1,25 @@
+
+	Minhas Finanças	
+
+	Renda Mensal	
+
+Renda Mensal: 		1000
+Renda Extra: 		0
+Renda Total: 		1000
+
+	Gastos Mensal	
+
+Aluguel: 		100
+Internet: 		0
+Luz: 			0
+Rocketseat: 		0
+Ampli: 			0
+Nubank: 		0
+Neon: 			0
+Inter: 			0
+Celular: 		0
+Corte Cabelo: 		0
+Amazon: 		0
+
+Valor Restante: 	900
+
